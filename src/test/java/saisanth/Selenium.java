@@ -29,7 +29,7 @@ public class Selenium {
 				//how to use get attribute
 		String string = username.getAttribute("value");
 		System.out.println(string);			
-		//
+		
 		WebElement password = driver.findElement(By.xpath("//input[@aria-label='Password']"));
 		password.sendKeys("iphone@1411S");
 		File src2 = ts.getScreenshotAs(OutputType.FILE);
@@ -38,7 +38,7 @@ public class Selenium {
 		//
 		String string2 = password.getAttribute("value");
 		System.out.println(string2);
-		//
+		
 		WebElement textprint = driver.findElement(By.xpath("//span[text()='© 2024 Instagram from Meta']"));
 		String string3 = textprint.getText();
 		System.out.println(string3);
