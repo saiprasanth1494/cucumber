@@ -1,14 +1,14 @@
 package saisanth;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import java.io.File;
-import java.io.IOException;
-import org.openqa.selenium.TakesScreenshot;
-
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import java.io.File;
+import java.io.IOException;
 
 public class Selenium {
 	public static void main(String[] args)throws IOException, InterruptedException {
@@ -22,8 +22,8 @@ public class Selenium {
 		FileUtils.copyFile(src,dest);
 		WebElement username = driver.findElement(By.xpath("//input[@aria-label='Phone number, username, or email']"));
 		username.sendKeys("9551224043");
-		//TakesScreenshot ts1=(TakesScreenshot)driver;
-		File src1 = ts.getScreenshotAs(OutputType.FILE);
+		TakesScreenshot ts1=(TakesScreenshot)driver;
+		File src1 = ts1.getScreenshotAs(OutputType.FILE);
 		File dest1 = new File("C:\\java from pendrive\\img1.jpg");
 		FileUtils.copyFile(src1,dest1);
 				//how to use get attribute
